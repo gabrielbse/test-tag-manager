@@ -22,3 +22,12 @@ function trigger() {
 		'elementClasses': 'elementClasses'
 	});
 }
+
+function triggerData() {
+	let text = document.getElementById("text-to-send").value;
+	console.log("Sending: " + text);
+	dataLayer.push({
+		'event': 'click-send-text',
+		'value': text
+	});
+}
